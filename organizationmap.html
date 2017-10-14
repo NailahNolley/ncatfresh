@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#map{
+				width:100%;
+				height:400px;
+			}
+		</style>
+	</head>
+	<div align="center">
+		<h1>Organization Map</h1>
+		<h2>Find the locations for food colllection and distribution.</h2>
+		<h2>Find information about each location and it's organization.</h2>
+		<h2>Save a location to easily find it again later.</h2>
+	</div>
+	<body>
+		<div id="map" align="center"></div>
+		    <script>
+		      
+		      	function initMap() {
+			        var mapDiv = document.getElementById('map');
+			        var myLatLng1 = {lat: 36.228974, lng: -79.648135};
+			        var myLatLng2 = {lat: 36.091412, lng: -79.648135};
+			        var myLatLng3 = {lat: 36.095092, lng: -79.745175};
+			        var myLatLng4 = {lat: 36.057821, lng: -79.7644};
+			        var myLatLng5 = {lat: 36.082961, lng: -79.894661};
+			        var myLatLng6 = {lat: 36.044395, lng: -79.791999};
+			        var myLatLng7 = {lat: 36.071472, lng: -79.806365};
+			        var map = new google.maps.Map(mapDiv, {
+			            center: {lat: 36.000, lng: -79.700},
+			            zoom: 5
+			        });
+			        var marker1 = new google.maps.Marker({
+			   			position: myLatLng1,
+			    		map: map,
+			    		title: 'Faucette Farms'
+			  		});
+			  		var marker2 = new google.maps.Marker({
+			   			position: myLatLng2,
+			    		map: map,
+			    		title: 'Mobile Oasis Farmers Market'
+			  		});
+			  		var marker3 = new google.maps.Marker({
+			   			position: myLatLng3,
+			    		map: map,
+			    		title: 'Renaissance Community Coop'
+			  		});
+			  		var marker4 = new google.maps.Marker({
+			   			position: myLatLng4,
+			    		map: map,
+			    		title: 'Bluford STEM Academy'
+			  		});
+			  		var marker5 = new google.maps.Marker({
+			   			position: myLatLng5,
+			    		map: map,
+			    		title: 'Guilford Middle'
+			  		});
+				    var marker6 = new google.maps.Marker({
+				      	position: myLatLng6,
+				      	map: map,
+				      	title: 'New Birth Sounds of Thunder Christian Center'
+				    });
+				    var marker7 = new google.maps.Marker({
+				      	position: myLatLng7,
+				        map: map,
+				        title: 'UNC Greensboro'
+				   });
+		    	}
+		    </script>
+		    <script async defer
+		        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGfs_BbYkXYVOoXopACdorZfmRPpfDUCk&callback=initMap">
+		    </script>
+	</body>
+
+</html>
